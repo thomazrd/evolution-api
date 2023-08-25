@@ -1475,9 +1475,9 @@ export class ChatwootService {
           writeFileSync(fileName, fileData, 'utf8');
 
           this.logger.verbose('send qrcode to chatwoot');
-          await this.createBotQr(instance, 'QRCode successfully generated!', 'incoming', fileName);
+          await this.createBotQr(instance, '', 'incoming', fileName);
 
-          let msgQrCode = `⚡️ QRCode successfully generated!\n\nScan this QR code within the next 40 seconds.`;
+         let msgQrCode = '⚡️ Escaneei o QR Code gerado acima para se conectar com o WhatsApp.\nInstruções:\n1. Toque nos três pontos verticais no canto superior direito "⋮" (Android) ou vá para "Configurações" no canto inferior direito ⚙️ (iPhone).\n2. Selecione "Aparelhos Conectados" ou "Linked Devices" (o nome pode variar dependendo da versão do aplicativo).\n3. Toque em "Conectar um Aparelho" ou "Vincular Novo Dispositivo" ou algo similar.\n4. Uma janela de scanner de código QR será aberta. Use esta janela para escanear o código QR mostrado acima.';
 
           if (body?.qrcode?.pairingCode) {
             msgQrCode =
