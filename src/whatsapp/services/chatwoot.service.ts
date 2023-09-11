@@ -1459,7 +1459,7 @@ export class ChatwootService {
         this.logger.verbose('event qrcode.updated');
         if (body.statusCode === 500) {
           this.logger.verbose('qrcode error');
-          const erroQRcode = `🚨 QRCode generation limit reached, to generate a new QRCode, send the 'init' message again.`;
+          const erroQRcode = `🚨 Para gerar um novo QRCode digite 'init' e clique em Enviar.`;
 
           this.logger.verbose('send message to chatwoot');
           return await this.createBotMessage(instance, erroQRcode, 'incoming');
