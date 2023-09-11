@@ -9,7 +9,7 @@ env:
   CLUSTER_NAME: cluster
   INFRA_SSH_HOST: ssh.tiggomark.com.br
   INFRA_SSH_PORT: 22
-  INFRA_SSH_USERNAME: tiggomark
+  INFRA_SSH_USERNAME: root
   DOCKERHUB_USERNAME: tiggomark
 
 jobs:
