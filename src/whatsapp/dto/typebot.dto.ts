@@ -4,6 +4,13 @@ export class Session {
   status?: string;
   createdAt?: number;
   updateAt?: number;
+  prefilledVariables?: PrefilledVariables;
+}
+
+export class PrefilledVariables {
+  remoteJid?: string;
+  pushName?: string;
+  additionalData?: { [key: string]: any };
 }
 
 export class TypebotDto {
@@ -14,5 +21,6 @@ export class TypebotDto {
   keyword_finish?: string;
   delay_message?: number;
   unknown_message?: string;
+  listening_from_me?: boolean;
   sessions?: Session[];
 }

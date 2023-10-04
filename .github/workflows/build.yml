@@ -44,4 +44,3 @@ jobs:
             docker login -u ${{ env.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
             docker pull tiggomark/evolution-api:latest
             docker service update --image tiggomark/evolution-api:latest --detach=false --force cluster_whatsapp_api
-            docker service update --image nginx --detach=false --force cluster_nginx
